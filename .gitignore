@@ -1,0 +1,13 @@
+node_modules/
+.npm-cache/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+.DS_Store
+*.log
+
+# 开发调试截图 / 研究快照（不入库）
+dev-*.png
+.home_*.png
+research-*.html
+research-data.json
+.ms-playwright/

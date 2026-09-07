@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.md$\")",
+      "Bash(grep -E \"\\\\.\\(md|png|jpg\\)$\")",
+      "Bash(grep -E \"\\\\.\\(md|png|jpg|目录\\)$\")",
+      "WebFetch(domain:git.inmind-lab.com)",
+      "WebSearch",
+      "Bash(grep -E \"\\\\.\\(md\\)$\")",
+      "Bash(xargs grep -l \"XXE\\\\|反序列化\\\\|逻辑漏洞\\\\|越权\\\\|竞态条件\\\\|CORS\\\\|HTTP头注入\")",
+      "Bash(awk '{print $NF}')"
+    ]
+  }
+}

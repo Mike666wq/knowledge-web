@@ -1,0 +1,20 @@
+# 依赖与缓存
+node_modules/
+.npm-cache/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
+# Git 与 CI（镜像内不需要）
+.git/
+.github/
+
+# 开发调试产物
+dev-*.png
+.home_*.png
+.ms-playwright/
+research-*.html
+research-data.json
+
+# 文档与环境
+*.log
+.DS_Store

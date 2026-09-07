@@ -1,0 +1,3 @@
+# 仅在把第 07 章本地教学检索器升级为 Chroma 向量库时安装。
+chromadb>=1.0,<2
+langchain-chroma>=1.0,<2

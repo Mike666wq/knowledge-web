@@ -1,0 +1,25 @@
+{
+  "name": "knowledge-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "NODE_OPTIONS=--max-old-space-size=4096 vitepress build docs",
+    "preview": "vitepress preview docs",
+    "sync-notes": "node scripts/sync-notes.mjs",
+    "gen-fixtures": "node scripts/gen-fixtures.mjs",
+    "smoke-test": "node scripts/smoke-test.mjs",
+    "check-md": "node scripts/check-md.mjs",
+    "clean": "rm -rf docs/.vitepress/cache docs/.vitepress/dist && echo '✓ 已清理'",
+    "deploy": "npm run check-md && npm run build && echo '✓ 构建完成，可上传 docs/.vitepress/dist/'",
+    "setup": "npm install && npm run sync-notes"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "playwright": "^1.62.1",
+    "pngjs": "^7.0.0",
+    "vitepress": "^1.6.4"
+  }
+}
