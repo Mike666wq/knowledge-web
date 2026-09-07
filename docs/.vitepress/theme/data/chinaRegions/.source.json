@@ -1,0 +1,53 @@
+{
+  "name": "china-region",
+  "version": "1.4.1",
+  "description": "中华人民共和国行政区划代码 API 快查，支持省地市三级数据联动，根据国家标准 GB 2260 行政区划代码制定",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "dist",
+    "data"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "axios": "^0.21.1",
+    "chai": "^4.3.4",
+    "cheerio": "^1.0.0-rc.3",
+    "lodash": "^4.17.21",
+    "mocha": "^9.0.3",
+    "rollup": "^2.58.0",
+    "ts-node": "^10.2.0",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "test": "mocha test.ts -r ts-node/register",
+    "fetch": "node script/fetch.js",
+    "prepublishOnly": "npm run build",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shfshanyue/china-region.git"
+  },
+  "keywords": [
+    "province",
+    "china",
+    "cn",
+    "city",
+    "GB2260",
+    "中国",
+    "中华人民共和国",
+    "行政区划",
+    "省市",
+    "省市县",
+    "省地市联动"
+  ],
+  "author": "shanyue",
+  "license": "ISC"
+}
