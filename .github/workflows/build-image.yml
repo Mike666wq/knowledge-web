@@ -10,7 +10,7 @@ on:
 
 # 最小权限：只读代码 + 写镜像包
 permissions:
-  content: read
+  contents: read
   packages: write
 
 jobs:
