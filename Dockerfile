@@ -19,6 +19,9 @@ RUN npm ci
 # 2) 拷贝源码 + 删掉被解引用的 docs/notes 副本（Docker COPY 会把宿主软链展开成真实目录，必须先删再建）
 COPY . .
 RUN rm -rf docs/notes
+# ★ 删掉 notes/ 下嵌套的 .git 目录（如 Linux基础/.git、Java/Java/.git 等）
+#   BuildKit 在 git-aware context 下会跳过整个 nested git repo，导致整个父目录消失
+RUN find notes -type d -name .git -exec rm -rf {} + 2>/dev/null || true
 RUN npm run sync-notes
 
 # 3) 门禁检查 + 构建（任何一步失败则镜像构建失败，坏镜像出不去）
