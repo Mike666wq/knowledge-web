@@ -11,3 +11,7 @@ dev-*.png
 research-*.html
 research-data.json
 .ms-playwright/
+
+# nested git 残留目录（笔记同步工具遗留，已重命名为 .disabled 避免被当 gitlink）
+**/.git.disabled/
+**/.git/
